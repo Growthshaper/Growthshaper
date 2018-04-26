@@ -1,2 +1,2 @@
 # Growthshaper
-Business validation web application for Growthshaper
+# Business validation web application for Growthshaper
