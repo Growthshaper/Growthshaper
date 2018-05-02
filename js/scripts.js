@@ -1,69 +1,34 @@
-/*google.charts.load('current', {'packages':['corechart']});
+google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawChart);
 
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Operationell effektivitet', 'Entrepenörskap'],
-          [ 2.2,      3.8],
-          [ 4,      2.9],
-          [ 1,     1.4],
-          [ 4,      2.5],
-          [ 3,      3.5],
-          [ 1.5,    2.7]
+          ['', 'Operationell effektivitet', 'Entrepenörskap', 'Markering'],
+          ['', 4.2,      4.8, 'Önskat läge'],
+          ['', 2,      2.9, 'Upplevt läge'],
+          [ '',4,     4.4, 'Önskat läge'],
+          [ '',2.2,      2.5, 'Upplevt läge'],
+          ['', 4.8,      4.5, 'Önskat läge'],
+          [ '',2.7,    2.7, 'Upplevt läge'],
+          ['', 4.5,      4.5, 'Önskat läge'],
+          [ '',1.8,    2, 'Upplevt läge'],
+          ['', 4.4,      4, 'Önskat läge'],
+          [ '',2.1,    2.1, 'Upplevt läge'],
+          ['', 4.9,      4, 'Önskat läge'],
+          [ '',2.9,    2.3, 'Upplevt läge']
         ]);
 
         var options = {
-          title: 'Önskat läge vs upplevt värde',
-          hAxis: {title: 'Operationell effektivitet', minValue: 1, maxValue: 5},
-          vAxis: {title: 'Entrepenörskap', minValue: 1, maxValue: 5},
-          legend: 'none',
+          title: 'Önskat läge vs upplevt värde enligt estimering från ledning',
+          hAxis: {title: 'Operationell effektivitet', minValue: 1, maxValue: 5, ticks: [{v:1, f:'Låg'},{v:2, f:''},{v:3, f:''},{v:4, f:''},{v:5, f:'Hög'}]},
+          vAxis: {title: 'Entrepenörskap', minValue: 1, maxValue: 5, ticks: [{v:1, f:''},{v:2, f:''},{v:3, f:''},{v:4, f:''},{v:5, f:'Hög'}]},
+          sizeAxis: {minValue: 0, maxSize: 5},
           'width': 500,
-          'height': 500
+          'height': 500,
+          legend:{position: 'top'}
         };
 
-        var chart = new google.visualization.ScatterChart(document.getElementById('chartVy1'));
+        var chart = new google.visualization.BubbleChart(document.getElementById('chartVy1'));
 
         chart.draw(data, options);
-      }*/
-
-google.charts.load('current', {'packages':['corechart', 'scatter']});
-  google.charts.setOnLoadCallback(drawStuff);
-
-    function drawStuff() {
-
-      //var button = document.getElementById('change-chart');
-      var chartDiv = document.getElementById('chartVy2');
-
-        var data = new google.visualization.DataTable();
-          data.addColumn('number', 'Operationell effektivitet');
-          data.addColumn('number', 'Önskat läge');
-          data.addColumn('number', 'Upplevt läge');
-
-            data.addRows([
-              [4.6, 4.7, null], [1.8, null, 1.1],
-              [4, 4.3, null], [2, null, 2.4],
-              [4.6, 4.3, null], [3.2, null, 2.8],
-              [4.2, 4, null], [3, null, 1.5],
-              [4.5, 4.5, null], [2.5, null, 2.5],
-              [4, 4.1, null], [3.1, null, 2]
-            ]);
-
-        var materialOptions = {
-          chart: {
-            title: 'Önskat läge vs upplevt värde',
-            subtitle: 'baserat på estimering från ledning'
-              },
-              width: 800,
-              height: 500,
-              vAxis: {title: 'Entrepenörskap'}
-            };
-
-              function drawMaterialChart() {
-                var materialChart = new google.charts.Scatter(chartDiv);
-                materialChart.draw(data, google.charts.Scatter.convertOptions(materialOptions));
-                button.innerText = 'Change to Classic';
-                button.onclick = drawClassicChart;
-              }
-
-              drawMaterialChart();
-          };
+      }
