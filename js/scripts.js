@@ -19,7 +19,7 @@ google.charts.load('current', {'packages':['corechart']});
         ]);
 
         var options = {
-          title: 'Önskat läge vs upplevt värde enligt estimering från ledning',
+          title: 'Önskat läge och upplevt värde enligt estimering från ledning. Analysvy 1.',
           hAxis: {title: 'Operationell effektivitet', minValue: 1, maxValue: 5, ticks: [{v:1, f:'Låg'},{v:2, f:''},{v:3, f:''},{v:4, f:''},{v:5, f:'Hög'}]},
           vAxis: {title: 'Entrepenörskap', minValue: 1, maxValue: 5, ticks: [{v:1, f:''},{v:2, f:''},{v:3, f:''},{v:4, f:''},{v:5, f:'Hög'}]},
           sizeAxis: {minValue: 0, maxSize: 5},
