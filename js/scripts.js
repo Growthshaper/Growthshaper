@@ -23,8 +23,8 @@ google.charts.load('current', {'packages':['corechart']});
           hAxis: {title: 'Operationell effektivitet', minValue: 1, maxValue: 5, ticks: [{v:1, f:'Låg'},{v:2, f:''},{v:3, f:''},{v:4, f:''},{v:5, f:'Hög'}]},
           vAxis: {title: 'Entrepenörskap', minValue: 1, maxValue: 5, ticks: [{v:1, f:''},{v:2, f:''},{v:3, f:''},{v:4, f:''},{v:5, f:'Hög'}]},
           sizeAxis: {minValue: 0, maxSize: 5},
-          'width': 500,
-          'height': 500,
+          'width': 600,
+          'height': 600,
           legend:{position: 'top'}
         };
 
